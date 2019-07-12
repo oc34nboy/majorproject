@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#f1f1f1"
+        android:collapseColumns="1,2">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#7A7575"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TelePhone Number"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#7A7575"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Police Control"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fire Brigade"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="101"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aasara Drug Rehabilitation Center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4384881"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Bank"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4225344"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nepal Eye Bank"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01-4493684"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
+                    android:textColor="#000000"/>
+
+            </TableRow>
+            <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nepal Eye Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4250691"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+            <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tilganga Eye Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4423684"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+            <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bir Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4223807/01-4221988"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nepal Police Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4412430/01-44122530"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TU Teaching Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4412404/01-4412505"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maternity Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4253276"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teku Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4253396"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bhaktapur Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-6610676"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B&amp;B Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-5533206"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Norvic Hospital"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4258554"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gangalal National Heart Centre"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4371322/01-4371374"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="National Kidney Centre"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01-4429866/01-4426016"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="#000000"/>
+
+        </TableRow>
+
+    </TableLayout>
+    
+    <Button
+        android:id="@+id/switchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Details"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:onClick="collapseTable"/>
+
+</LinearLayout>
