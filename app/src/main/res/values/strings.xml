@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">WeCare</string>
+    <string name="spinner_title">WeCare</string>
 
 </resources>

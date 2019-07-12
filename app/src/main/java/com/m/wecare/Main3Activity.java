@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -21,18 +22,26 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class Main3Activity extends AppCompatActivity{
 
 
     private Button button;
+    private TextView resultText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.output);
-        //getting symptoms list from server
+       //getting msg passing through intetn
+        Intent intent=getIntent();
+        String predicatedDiseaseName=intent.getStringExtra("predicatedDiseaseName");
+        resultText=(TextView)findViewById(R.id.result);
+        resultText.setText(predicatedDiseaseName);
+
+
 
 
         button = (Button) findViewById(R.id.btnCheckup);

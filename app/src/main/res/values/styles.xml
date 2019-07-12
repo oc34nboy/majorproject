@@ -3,21 +3,12 @@
 
 
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
 
     </style>
 
-    <string name="symptom_prompt">Choose Symptom</string>
 
-    <string-array name="symptom_arrays">
-        <item>Fever </item>
-        <item>Severe Headache</item>
-        <item>yellowish Skin</item>
-        <item>trouble breathing</item>
-        <item> weight loss</item>
-        <item>Abdominal pain and cramping</item>
-        <item>Chest tightness or pain</item>
-        <item>Nausea or vomiting</item>
-    </string-array>
+
+
 
 </resources>

@@ -32,7 +32,10 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
 
       Button button1;
     List symptomsList=new ArrayList();
-    String[] users = { "Suresh Dasari", "Trishika Dasari", "Rohini Alavala", "Praveen Kumar", "Madhav Sai" };
+    final List<String> userSymptomsList=new ArrayList();
+    String[] users = { "Suresh Dasari0001", "Trishika Dasari", "Rohini Alavala", "Praveen Kumar", "Madhav Sai" };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -41,11 +44,67 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
         setContentView(R.layout.user_input);
         getSymptoms(new VolleyCallback() {
             @Override
-            public void onSuccessResponse(List result) {
+            public void onSuccessResponse(final List result) {
 
                 symptomsList=result;
                 //just a commet
                 //second commet
+                //spinner element
+                Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
+                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        int index = parent.getSelectedItemPosition();
+                        //selected element name
+                        System.out.println("selected symptoms"+ result.get(position));
+                        userSymptomsList.add(result.get(position).toString());
+
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+
+                // Creating adapter for spinner
+                ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<>(InputScreen.this, android.R.layout.simple_spinner_item, symptomsList);
+                // Drop down layout style - list view with radio button
+                dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // attaching data adapter to spinner
+                spinner1.setAdapter(dataAdapter1);
+
+
+                Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        int index = parent.getSelectedItemPosition();
+                        //selected element name
+                        System.out.println("selected symptoms"+ result.get(position));
+                        userSymptomsList.add(result.get(position).toString());
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+
+                // Creating adapter for spinner
+                ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<>(InputScreen.this, android.R.layout.simple_spinner_item, symptomsList);
+                // Drop down layout style - list view with radio button
+                dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // attaching data adapter to spinner
+                spinner2.setAdapter(dataAdapter2);
+
+
+
+
             }
         });
 
@@ -57,37 +116,50 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
             @Override
             public void onClick(View v) {
                 System.out.println("Button click");
-                openMain3Activity();
+                //user selected symptomslist
+                System.out.println("user selected Symptoms");
+
+                System.out.println(userSymptomsList);
+                //calling api by passing user symptoms
+
+                //diagnosis(userSymptomsList);
+                diagnosis(userSymptomsList, new DiagnosisCallback() {
+                    @Override
+                    public void onSuccessResponse(String predicatedDiseaseName) {
+
+
+                        //opening report activity by passing predicated disease name
+                        //opening output activity
+                        Intent intent = new Intent(InputScreen.this, Main3Activity.class);
+                        intent.putExtra("predicatedDiseaseName",predicatedDiseaseName);
+                        startActivity(intent);
+
+                    }
+                });
+
+
+
+
+
+                //openMain3Activity();
             }
         });
         System.out.println("New clicked");
 
 
 
-        Spinner spin = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin.setAdapter(adapter);
 
-        Spinner spin1 = (Spinner) findViewById(R.id.spinner2);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin1.setAdapter(adapter1);
 
-        Spinner spin2 = (Spinner) findViewById(R.id.spinner3);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin2.setAdapter(adapter2);
     }
 
     public interface VolleyCallback {
         void onSuccessResponse(List result);
     }
-    public void  openMain3Activity(){
-        System.out.println("Function clicked");
-        Intent intent = new Intent(this, Main3Activity.class);
-        startActivity(intent);
+
+    public interface DiagnosisCallback{
+        void onSuccessResponse(String predicatedDiseaseName);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,12 +189,12 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    private void diagnosis() {
+    private void diagnosis(List symptoms,final DiagnosisCallback callback) {
         JSONObject postparams = new JSONObject();
         RequestQueue queue = Volley.newRequestQueue(this);
         String url="https://lapzap98.pythonanywhere.com/api/diagnosis";
         try {
-            postparams.put("symptoms", "itching");
+            postparams.put("symptoms", new JSONArray(symptoms) );
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -137,7 +209,10 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                         System.out.println("got response");
                         System.out.println("array length:"+response);
                         String diagnosis=response.toString().split("\\:")[1];
-                        System.out.println(diagnosis.replaceAll("[^a-zA-Z0-9\\s+]", ""));
+                        String predicateDiseaseName=diagnosis.replaceAll("[^a-zA-Z0-9\\s+]", "");
+                        callback.onSuccessResponse(predicateDiseaseName);
+
+
 
 
                     }

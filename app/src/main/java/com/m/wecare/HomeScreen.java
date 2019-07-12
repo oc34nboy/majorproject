@@ -53,6 +53,9 @@ public class HomeScreen extends AppCompatActivity {
 
 
     public void openMain2Activity() {
+
+        //calling input screeen
+
         System.out.println("Examine clicked");
         Intent intent = new Intent(this, InputScreen.class);
         startActivity(intent);

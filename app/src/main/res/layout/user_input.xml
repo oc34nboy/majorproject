@@ -8,26 +8,20 @@
     android:orientation="vertical">
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/symptom_arrays"
-        android:prompt="@string/symptom_prompt" />
+        android:layout_height="40dp"
 
-
+        android:spinnerMode="dropdown" />
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/symptom_arrays"
-        android:prompt="@string/symptom_prompt"/>
+        android:layout_height="40dp"
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/symptom_arrays"
-        android:prompt="@string/symptom_prompt"/>
+        android:spinnerMode="dropdown" />
+
+
+
 
     <Button
         android:id="@+id/btnSubmit"
