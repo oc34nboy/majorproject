@@ -50,7 +50,9 @@
     <last-search-timestamp>1562509658832</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff1c9f27-2367-4442-8ef1-8a4c7803cded" name="Default Changelist" comment="" />
+    <list default="true" id="ff1c9f27-2367-4442-8ef1-8a4c7803cded" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="273">
+              <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -572,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="273">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
         </state>
       </provider>
     </entry>

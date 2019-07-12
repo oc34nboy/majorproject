@@ -45,6 +45,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
 
                 symptomsList=result;
                 //just a commet
+                //second commet
             }
         });
 
