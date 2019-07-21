@@ -4,8 +4,10 @@
     package="com.m.wecare" >
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Main3Activity"/>
+
+        <activity android:name=".medicine.MedicineActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".addmedicine.AddMedicineActivity" />
+        <activity android:name=".alarm.ReminderActivity" />
+        <activity android:name=".report.MonthlyReportActivity"/>
 
         <activity android:name=".Table"/>
         <activity android:name=".HomeScreen"/>

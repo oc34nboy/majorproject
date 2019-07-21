@@ -1,0 +1,8 @@
+package com.m.wecare;
+
+
+
+public interface BaseView<T> {
+
+    void setPresenter(T presenter);
+}
