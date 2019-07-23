@@ -41,22 +41,9 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        btnReminder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Button click");
-                MedicineApp();
-            }
-        });
-
 
     }
 
-    public void MedicineApp() {
-        System.out.println("Pill Reminder clicked");
-        Intent intent = new Intent(this, Table.class);
-        startActivity(intent);
-    }
 
     public void openMain4Activity() {
         System.out.println("Emergency clicked");

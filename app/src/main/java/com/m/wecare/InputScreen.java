@@ -33,7 +33,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
       Button button1;
     List symptomsList=new ArrayList();
     final List<String> userSymptomsList=new ArrayList();
-    //String[] users = { "Suresh Dasari0001", "Trishika Dasari", "Rohini Alavala", "Praveen Kumar", "Madhav Sai" };
+    String[] users = { "Suresh Dasari0001", "Trishika Dasari", "Rohini Alavala", "Praveen Kumar", "Madhav Sai" };
 
 
     @Override
