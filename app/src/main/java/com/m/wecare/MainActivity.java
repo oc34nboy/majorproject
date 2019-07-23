@@ -11,12 +11,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+    private Button button,btnEmergency;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("Main Activity is launched");
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         button = (Button)findViewById(R.id.btnFindMe);
         button.setOnClickListener(new View.OnClickListener() {
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void  openMain1Activity(){
         System.out.println("Function clicked");
-        Intent intent = new Intent(this, HomeScreen.class);
+        Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
     @Override
@@ -46,8 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.item2:
+                Intent intent = new Intent(this, Table.class);
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
+
         }
     }
 

@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Main3Activity"/>
+        <activity android:name=".Profile"/>
 
         <activity android:name=".Table"/>
         <activity android:name=".HomeScreen"/>

@@ -48,21 +48,34 @@
 
 </LinearLayout>
 
-    <Button
-        android:id="@+id/btnCheckup"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        android:text="CheckUp Again" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnThankyou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        android:text="!!Thank You!!" />
+        <Button
+            android:id="@+id/btnCheckup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="CheckUp Again"
+            android:gravity="bottom"/>
+
+        <Button
+            android:id="@+id/btnThankyou"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="bottom"
+            android:text="!!Thank You!!" />
+    </LinearLayout>
+
 
 
 </RelativeLayout>

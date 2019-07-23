@@ -11,26 +11,15 @@ import android.widget.Button;
 
 public class HomeScreen extends AppCompatActivity {
 
-    Button btnProfile, btnExamine, btnEmergency, btnReminder;
+    Button  btnExamine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dash_board);
+        setContentView(R.layout.profile);
         System.out.println("main called");
 
-        btnEmergency = (Button) findViewById(R.id.buttonEmergency);
-        btnProfile = (Button) findViewById(R.id.buttonProfile);
-        btnReminder = (Button) findViewById(R.id.buttonReminder);
-        btnExamine = (Button) findViewById(R.id.buttonExamine);
-
-        btnEmergency.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Button click");
-                openMain4Activity();
-            }
-        });
+                btnExamine = (Button) findViewById(R.id.buttonExamine);
 
 
         btnExamine.setOnClickListener(new View.OnClickListener() {
@@ -45,14 +34,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
 
-    public void openMain4Activity() {
-        System.out.println("Emergency clicked");
-        Intent intent = new Intent(this, Table.class);
-        startActivity(intent);
-    }
-
-
-    public void openMain2Activity() {
+        public void openMain2Activity() {
 
         //calling input screeen
 

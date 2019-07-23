@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/back2"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:errorEnabled="true"
+        android:id="@+id/text_input_name">
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/name"
+        android:inputType="text"
+        android:hint="Enter your Name"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        app:errorEnabled="true"
+        android:id="@+id/text_input_age">
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:inputType="text"
+        android:hint="Enter your age"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="26sp"
+        android:text="Gender:"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:text="Male"
+        android:layout_marginLeft="10dp"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:text="FeMale"
+        android:layout_marginLeft="10dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:id="@+id/btnExamine"
+        android:layout_marginTop="40dp"
+        android:textSize="22sp"
+        android:text="Examine"/>
+
+    </LinearLayout>
