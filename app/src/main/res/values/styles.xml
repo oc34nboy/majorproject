@@ -4,7 +4,13 @@
 
 
     <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#151597</item>
 
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20dp</item>
     </style>
 
 
