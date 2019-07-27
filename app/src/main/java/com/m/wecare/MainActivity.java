@@ -15,10 +15,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("Main Activity is launched");
-
+        setContentView(R.layout.activity_main);
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        //testing other activtuty
+
+        Intent intent=new Intent(MainActivity.this,diagnosis_report.class);
+        startActivity(intent);
+
+
+
         button = (Button)findViewById(R.id.btnFindMe);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
