@@ -6,10 +6,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 <Button android:id="@+id/btnFindMe"
-    android:layout_width="150dp"
-    android:layout_height="150dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_centerInParent="true"
-    android:background="@drawable/statiscope"/>
+    android:background="@drawable/start_circle_button"/>
 
 
 

@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         super.onCreate(savedInstanceState);
 
-        //testing other activtuty
+        //testing other other activities
 
-        Intent intent=new Intent(MainActivity.this,diagnosis_report.class);
-        startActivity(intent);
+       // Intent intent=new Intent(MainActivity.this,diagnosis_report.class);
+      //  startActivity(intent);
 
 
 
