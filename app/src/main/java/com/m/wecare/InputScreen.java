@@ -10,7 +10,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -29,8 +31,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InputScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    LinearLayout linear;
 
-      Button button1;
+      Button button1,button2;
     List symptomsList=new ArrayList();
     final List<String> userSymptomsList=new ArrayList();
     String[] users = { "Suresh Dasari0001", "Trishika Dasari", "Rohini Alavala", "Praveen Kumar", "Madhav Sai" };
@@ -38,7 +41,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        linear = findViewById(R.id.linear);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_input);
@@ -46,7 +49,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
             @Override
             public void onSuccessResponse(final List result) {
 
-                symptomsList=result;
+                symptomsList = result;
                 //just a commet
                 //second commet
                 //spinner element
@@ -56,7 +59,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         int index = parent.getSelectedItemPosition();
                         //selected element name
-                        System.out.println("selected symptoms"+ result.get(position));
+                        System.out.println("selected symptoms" + result.get(position));
                         userSymptomsList.add(result.get(position).toString());
 
 
@@ -83,7 +86,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         int index = parent.getSelectedItemPosition();
                         //selected element name
-                        System.out.println("selected symptoms"+ result.get(position));
+                        System.out.println("selected symptoms" + result.get(position));
                         userSymptomsList.add(result.get(position).toString());
 
                     }
@@ -103,12 +106,46 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                 spinner2.setAdapter(dataAdapter2);
 
 
+                Spinner spinner3 = (Spinner) findViewById(R.id.spinner3);
+                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        int index = parent.getSelectedItemPosition();
+                        //selected element name
+                        System.out.println("selected symptoms" + result.get(position));
+                        userSymptomsList.add(result.get(position).toString());
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+
+                // Creating adapter for spinner
+                ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<>(InputScreen.this, android.R.layout.simple_spinner_item, symptomsList);
+                // Drop down layout style - list view with radio button
+                dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // attaching data adapter to spinner
+                spinner3.setAdapter(dataAdapter3);
 
 
             }
         });
+        button2 = (Button)findViewById(R.id.btnAdd);
+        button2.setOnClickListener(new View.OnClickListener() {
+           @Override
+                public void onClick(View v) {
+                Spinner spinner= new Spinner(InputScreen.this);
+                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(InputScreen.this, android.R.layout.simple_spinner_dropdown_item, userSymptomsList);
+                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(spinnerArrayAdapter);
+                linear.addView(spinner);
 
-
+                  }
+               });
 
 
         button1 = (Button)findViewById(R.id.btnSubmit);

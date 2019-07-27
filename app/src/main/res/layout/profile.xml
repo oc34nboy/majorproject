@@ -99,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:text="Examine"
+        android:text="NEXT"
         android:textSize="22sp"
         android:textColor="#ffffff"
         android:background="@drawable/button_border"/>
