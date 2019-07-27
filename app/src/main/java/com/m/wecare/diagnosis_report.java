@@ -30,7 +30,9 @@ public class diagnosis_report extends AppCompatActivity {
         diseaseProb.add("86%");
         diseaseName.add("second disease Name");
         diseaseProb.add("86%");
-        diseaseName.add("second disease Name");
+        diseaseName.add("third disease Name ghghgh");
+        diseaseProb.add("86%");
+        diseaseName.add("fourth disease Name fgfgf");
         diseaseProb.add("86%");
         initResult();
 
