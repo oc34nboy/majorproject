@@ -20,7 +20,6 @@ public class HomeFragment extends Fragment {
 
         button = (Button) v.findViewById(R.id.btnFindMe);
         button.setOnClickListener(openProfile);
-
         return v;
     }
 

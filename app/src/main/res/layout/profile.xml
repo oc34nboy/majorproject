@@ -19,47 +19,40 @@
         android:gravity="center"/>
 
 
+
+
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_name"
-        android:layout_width="372dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#151597"
-        android:textColorHint="#151597"
-        app:errorEnabled="true">
+        android:layout_marginBottom="20dp">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:background="@drawable/edit_text_border"
-            android:hint="Enter your Name"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#151597"
-            android:textColorHint="#151597" />
-
+            android:layout_height="wrap_content"
+            android:hint="Name" />
     </android.support.design.widget.TextInputLayout>
 
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_age"
-        android:layout_width="372dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:errorEnabled="true"
-        android:textColor="#151597"
-        android:textColorHint="#151597">
+        android:layout_marginBottom="20dp">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/text_input_age"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:background="@drawable/edit_text_border"
-            android:hint="Enter your age"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#151597"
-            android:textColorHint="#151597" />
-
+            android:layout_height="wrap_content"
+            android:hint="Age" />
     </android.support.design.widget.TextInputLayout>
+
+
+
+
 
 
     <RadioGroup
@@ -72,14 +65,14 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="26sp"
+        android:textSize="22sp"
         android:text="Gender:"
         android:textColor="#151597"/>
 
     <RadioButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:text="Male"
         android:layout_marginLeft="10dp"
         android:textColor="#151597"/>
@@ -87,7 +80,7 @@
     <RadioButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:text="Female"
         android:layout_marginLeft="10dp"
         android:textColor="#151597"/>
