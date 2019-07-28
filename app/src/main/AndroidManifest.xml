@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".diagnosis_report"></activity>
         <activity android:name=".Main3Activity" />
-        <activity android:name=".Profile" />
+        <activity android:name=".UserProfile"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Table" />
         <activity android:name=".HomeScreen" />
         <activity android:name=".InputScreen" />

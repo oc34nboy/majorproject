@@ -1,66 +1,63 @@
 package com.m.wecare;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button,btnEmergency;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("Main Activity is launched");
         setContentView(R.layout.activity_main);
         super.onCreate(savedInstanceState);
 
-        //testing other other activities
-
-       // Intent intent=new Intent(MainActivity.this,diagnosis_report.class);
-      //  startActivity(intent);
-
+        //starting new home fragement as default in starting
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new HomeFragment()).commit();
 
 
-        button = (Button)findViewById(R.id.btnFindMe);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Button click");
-                openMain1Activity();
-            }
-        });
+//setting bottom navigation
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+
     }
     public void  openMain1Activity(){
         System.out.println("Function clicked");
-        Intent intent = new Intent(this, Profile.class);
-        startActivity(intent);
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options, menu);
-        return true;
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item1:
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
 
-                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.item2:
-                Intent intent = new Intent(this, Table.class);
-                startActivity(intent);
-            default:
-                return super.onOptionsItemSelected(item);
+                    switch (item.getItemId()) {
+                        case R.id.home:
+                            selectedFragment = new HomeFragment();
+                            break;
+                        case R.id.emergency:
+                            selectedFragment = new RemainderFragment();
+                            break;
+                        case R.id.remainder:
+                            selectedFragment = new EmergencyFragment();
+                            break;
+                    }
 
-        }
-    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+                }
+            };
+
 
 
 }
