@@ -50,6 +50,8 @@ public class Report_recycleView_adapter extends RecyclerView.Adapter<Report_recy
                     Toast.makeText(context, diseaseName.get(position), Toast.LENGTH_SHORT).show();
                     //opening disease detail activity
                     Intent intent = new Intent(context,disease_detail.class);
+                   intent.putExtra("diseaseName", diseaseName.get(position));
+
                     context.startActivity(intent);
 
                 }
