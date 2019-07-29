@@ -16,22 +16,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/edit_text_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_text_border.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_botton.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_botton.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_input.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_input.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+            <state relative-caret-position="510">
+              <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
@@ -71,18 +59,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="214" column="58" lean-forward="true" selection-start-line="214" selection-start-column="58" selection-end-line="214" selection-end-column="58" />
+            <state relative-caret-position="344">
+              <caret line="228" column="82" selection-start-line="228" selection-start-column="82" selection-end-line="228" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1548#5837#0" expanded="true" />
+                <element signature="e#5836#5837#0" expanded="true" />
+                <element signature="e#7857#9836#0" expanded="true" />
+                <element signature="e#9835#9836#0" expanded="true" />
+                <element signature="e#10623#11164#0" expanded="true" />
+                <element signature="e#11163#11164#0" expanded="true" />
+                <element signature="e#11182#11464#0" expanded="true" />
+                <element signature="e#11463#11464#0" expanded="true" />
+                <element signature="e#11909#12714#0" expanded="true" />
+                <element signature="e#12713#12714#0" expanded="true" />
+                <element signature="e#12733#13015#0" expanded="true" />
+                <element signature="e#13014#13015#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/captures/com.m.wecare_2019.07.29_09.48.li">
-          <provider selected="true" editor-type-id="capture-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -359,7 +354,7 @@
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.20268457" />
       <window_info id="Resources Explorer" order="7" weight="0.3295302" />
       <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="0" visible="true" weight="0.16085792" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="0" visible="true" weight="0.04021448" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.78016084" />
       <window_info anchor="bottom" id="Debug" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32841823" />
@@ -646,14 +641,6 @@
     <entry file="file://$PROJECT_DIR$/captures/com.m.wecare_2019.07.29_09.44-1.li">
       <provider selected="true" editor-type-id="capture-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="26" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -664,23 +651,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_input.xml">
+    <entry file="file://$PROJECT_DIR$/captures/com.m.wecare_2019.07.29_09.48.li">
+      <provider selected="true" editor-type-id="capture-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+        <state>
+          <caret column="33" selection-start-column="26" selection-end-column="33" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/captures/com.m.wecare_2019.07.29_09.48.li">
-      <provider selected="true" editor-type-id="capture-editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_input.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="214" column="58" lean-forward="true" selection-start-line="214" selection-start-column="58" selection-end-line="214" selection-end-column="58" />
+        <state relative-caret-position="344">
+          <caret line="228" column="82" selection-start-line="228" selection-start-column="82" selection-end-line="228" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1548#5837#0" expanded="true" />
+            <element signature="e#5836#5837#0" expanded="true" />
+            <element signature="e#7857#9836#0" expanded="true" />
+            <element signature="e#9835#9836#0" expanded="true" />
+            <element signature="e#10623#11164#0" expanded="true" />
+            <element signature="e#11163#11164#0" expanded="true" />
+            <element signature="e#11182#11464#0" expanded="true" />
+            <element signature="e#11463#11464#0" expanded="true" />
+            <element signature="e#11909#12714#0" expanded="true" />
+            <element signature="e#12713#12714#0" expanded="true" />
+            <element signature="e#12733#13015#0" expanded="true" />
+            <element signature="e#13014#13015#0" expanded="true" />
           </folding>
         </state>
       </provider>

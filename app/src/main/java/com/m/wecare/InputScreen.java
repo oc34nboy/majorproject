@@ -38,9 +38,10 @@ import java.util.List;
 public class InputScreen extends AppCompatActivity {
     LinearLayout spinner_parent_layout;
 
-      Button addSpinnerBtn,button2;
+      Button addSpinnerBtn,examineBtn;
     List symptomsList=new ArrayList();
     final List<String> userSymptomsList=new ArrayList();
+    final List<String> symptomList=new ArrayList<>();
 
 
     @Override
@@ -62,8 +63,16 @@ public class InputScreen extends AppCompatActivity {
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         int index = parent.getSelectedItemPosition();
                         //selected element name
-                        System.out.println("selected symptoms" + result.get(position));
-                        userSymptomsList.add(result.get(position).toString());
+
+                        //not adding default value at index 0
+                        System.out.println("selected symptoms" + symptomsList.get(position));
+                            if(position!=0){
+                                userSymptomsList.add(symptomsList.get(position).toString());
+                            }
+
+
+
+
                     }
                     @Override
                     public void onNothingSelected(AdapterView<?> parent) {
@@ -80,13 +89,15 @@ public class InputScreen extends AppCompatActivity {
 
 
                 Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
-                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         int index = parent.getSelectedItemPosition();
                         //selected element name
-                        System.out.println("selected symptoms" + result.get(position));
-                        userSymptomsList.add(result.get(position).toString());
+                        System.out.println("selected symptoms" + symptomsList.get(position));
+                        if(position!=0){
+                            userSymptomsList.add(symptomsList.get(position).toString());
+                        }
 
                     }
 
@@ -106,13 +117,15 @@ public class InputScreen extends AppCompatActivity {
 
 
                 Spinner spinner3 = (Spinner) findViewById(R.id.spinner3);
-                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         int index = parent.getSelectedItemPosition();
                         //selected element name
-                        System.out.println("selected symptoms" + result.get(position));
-                        userSymptomsList.add(result.get(position).toString());
+                        System.out.println("selected symptoms" + symptomsList.get(position));
+                        if(position!=0){
+                            userSymptomsList.add(symptomsList.get(position).toString());
+                        }
 
                     }
 
@@ -147,18 +160,18 @@ public class InputScreen extends AppCompatActivity {
                });*/
 
 
-       /* button1 = (Button)findViewById(R.id.btnSubmit);
-        button1.setOnClickListener(new View.OnClickListener() {
+        examineBtn = findViewById(R.id.btnSubmit);
+        examineBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Button click");
+                System.out.println("examine btn click");
                 //user selected symptomslist
                 System.out.println("user selected Symptoms");
 
                 System.out.println(userSymptomsList);
                 //calling api by passing user symptoms
 
-                //diagnosis(userSymptomsList);
+               /* //diagnosis(userSymptomsList);
                 diagnosis(userSymptomsList, new DiagnosisCallback() {
                     @Override
                     public void onSuccessResponse(String predicatedDiseaseName) {
@@ -171,7 +184,7 @@ public class InputScreen extends AppCompatActivity {
                         startActivity(intent);
 
                     }
-                });
+                });*/
 
 
 
@@ -180,7 +193,7 @@ public class InputScreen extends AppCompatActivity {
                 //openMain3Activity();
             }
         });
-        */
+
 
         addSpinnerBtn=findViewById(R.id.addSpinnerBtn);
         addSpinnerBtn.setOnClickListener(addSpinnerHandler);
@@ -201,18 +214,42 @@ public class InputScreen extends AppCompatActivity {
             LayoutInflater vi = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View view = vi.inflate(R.layout.spinner_item,null);
 
-            Spinner spinner=view.findViewById(R.id.spinner);
+            Spinner dynamicSpinner=view.findViewById(R.id.spinner);
             ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<>(InputScreen.this, android.R.layout.simple_spinner_item, symptomsList);
             // Drop down layout style - list view with radio button
             dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinner.setAdapter(dataAdapter2);
-            spinner.setId(0);
+            dynamicSpinner.setAdapter(dataAdapter2);
+            dynamicSpinner.setId(0);
+
+            dynamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    int index = parent.getSelectedItemPosition();
+                    //selected element name
+                    System.out.println(" dynamic selected symptoms" + symptomsList.get(position));
+                    if(position!=0){
+                        userSymptomsList.add(symptomsList.get(position).toString());
+                    }
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+
+
+
+
+
             final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             params.height=196;
             params.setMargins(0,0,0,88);
 
-            spinner_parent_layout.addView(spinner,params);
+            spinner_parent_layout.addView(dynamicSpinner,params);
 
 
 

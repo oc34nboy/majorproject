@@ -25,7 +25,7 @@
     <LinearLayout
         android:id="@+id/spinner_parent_layout"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -65,13 +65,13 @@
 
     <Button
         android:id="@+id/addSpinnerBtn"
-        android:layout_width="110dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/round_botton"
         android:text="Add symptom"
-        android:textSize="12sp"
+        android:textSize="11sp"
         android:textColor="#ffffff"
         />
 
@@ -81,7 +81,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_border"
-        android:text="SUBMIT"
+        android:text="Examine"
         android:layout_alignParentBottom="true"
         android:textColor="#ffffff"
         android:textSize="22sp" />
