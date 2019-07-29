@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.chivorns:smartmaterialspinner:1.1.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5bf755dd058d15cb811fcb7b963cfa78/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5bf755dd058d15cb811fcb7b963cfa78/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.chivorns/smartmaterialspinner/1.1.5/d76bb4f6b5a73dc50299182c493b97a261d78b04/smartmaterialspinner-1.1.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

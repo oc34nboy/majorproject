@@ -1,12 +1,15 @@
 package com.m.wecare;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -22,6 +25,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,18 +35,16 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    LinearLayout linear;
+public class InputScreen extends AppCompatActivity {
+    LinearLayout spinner_parent_layout;
 
-      Button button1,button2;
+      Button addSpinnerBtn,button2;
     List symptomsList=new ArrayList();
     final List<String> userSymptomsList=new ArrayList();
-    String[] users = { "Suresh Dasari0001", "Trishika Dasari", "Rohini Alavala", "Praveen Kumar", "Madhav Sai" };
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        linear = findViewById(R.id.linear);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_input);
@@ -50,8 +53,8 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
             public void onSuccessResponse(final List result) {
 
                 symptomsList = result;
-                //just a commet
-                //second commet
+                symptomsList.add(0,"Select Symptom");
+
                 //spinner element
                 Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
                 spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -61,13 +64,9 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                         //selected element name
                         System.out.println("selected symptoms" + result.get(position));
                         userSymptomsList.add(result.get(position).toString());
-
-
                     }
-
                     @Override
                     public void onNothingSelected(AdapterView<?> parent) {
-
                     }
                 });
 
@@ -134,7 +133,7 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
 
             }
         });
-        button2 = (Button)findViewById(R.id.btnAdd);
+        /*button2 = (Button)findViewById(R.id.btnAdd);
         button2.setOnClickListener(new View.OnClickListener() {
            @Override
                 public void onClick(View v) {
@@ -145,10 +144,10 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                 linear.addView(spinner);
 
                   }
-               });
+               });*/
 
 
-        button1 = (Button)findViewById(R.id.btnSubmit);
+       /* button1 = (Button)findViewById(R.id.btnSubmit);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,13 +180,49 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
                 //openMain3Activity();
             }
         });
-        System.out.println("New clicked");
+        */
+
+        addSpinnerBtn=findViewById(R.id.addSpinnerBtn);
+        addSpinnerBtn.setOnClickListener(addSpinnerHandler);
+
 
 
 
 
 
     }
+
+    private View.OnClickListener addSpinnerHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            //adding new spinner dynammically
+            System.out.println("dynamica called");
+            spinner_parent_layout=findViewById(R.id.spinner_parent_layout);
+            LayoutInflater vi = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View view = vi.inflate(R.layout.spinner_item,null);
+
+            Spinner spinner=view.findViewById(R.id.spinner);
+            ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<>(InputScreen.this, android.R.layout.simple_spinner_item, symptomsList);
+            // Drop down layout style - list view with radio button
+            dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner.setAdapter(dataAdapter2);
+            spinner.setId(0);
+            final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.height=196;
+            params.setMargins(0,0,0,88);
+
+            spinner_parent_layout.addView(spinner,params);
+
+
+
+
+
+
+
+
+        }
+    };
 
     public interface VolleyCallback {
         void onSuccessResponse(List result);
@@ -200,15 +235,6 @@ public class InputScreen extends AppCompatActivity implements AdapterView.OnItem
 
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
     private void diagnosis(List symptoms,final DiagnosisCallback callback) {
         JSONObject postparams = new JSONObject();
         RequestQueue queue = Volley.newRequestQueue(this);

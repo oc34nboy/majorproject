@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
+<selector  xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <layer-list>
+    <item>
 
-    <stroke
-        android:width="3dp"
-        android:color="@color/colorPrimary"/>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="@color/greyBorder"/>
+            <corners
+                android:radius="3dp"
 
-    <corners
-        android:radius="3dp"
+                />
 
-        />
+        </shape>
+    </item>
 
-</shape>
+        <item android:drawable="@drawable/ic_arrow_drop_down"
+            android:right="10dp"
+
+            android:gravity="center|right"/>
+    </layer-list>
+
+</item>
+</selector>
