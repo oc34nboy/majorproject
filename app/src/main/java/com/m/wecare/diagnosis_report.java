@@ -1,11 +1,26 @@
 package com.m.wecare;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Consumer;
 
 public class diagnosis_report extends AppCompatActivity {
 
@@ -15,26 +30,34 @@ public class diagnosis_report extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diagnosis_report);
+        setContentView(R.layout.diagnosis_report);
 
-        System.out.println("diagnois activity open");
+        Intent intent = getIntent();
+        String[] predicatedDiseaseName = intent.getStringArrayExtra("symptomslist");
+        System.out.println("predicate disease list via intent");
+        System.out.println(predicatedDiseaseName);
 
-        getData();
+        getData(predicatedDiseaseName);
 
 
 
     }
 
-    private void getData() {
-        diseaseName.add("first disease Name");
-        diseaseProb.add("86%");
-        diseaseName.add("second disease Name");
-        diseaseProb.add("86%");
-        diseaseName.add("third disease Name ghghgh");
-        diseaseProb.add("86%");
-        diseaseName.add("fourth disease Name fgfgf");
-        diseaseProb.add("86%");
-        initResult();
+    private void getData(String[] userSymptomsList) {
+
+        diagnosis(userSymptomsList, new DiagnosisCallback() {
+                    @Override
+                    public void onSuccessResponse(String predicatedDiseaseName) {
+
+                        System.out.println("predicated disease iom diagnosis report ");
+                        System.out.println(predicatedDiseaseName);
+                        initResult();
+                    }
+                });
+
+
+
+
 
 
     }
@@ -46,6 +69,60 @@ public class diagnosis_report extends AppCompatActivity {
         Report_recycleView_adapter adapter = new Report_recycleView_adapter(this,diseaseName,diseaseProb);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+    }
+
+
+    public interface DiagnosisCallback{
+        void onSuccessResponse(String predicatedDiseaseName);
+    }
+
+    private void diagnosis(String[] symptoms, final DiagnosisCallback callback) {
+        JSONObject postparams = new JSONObject();
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url="http://10.0.2.2:5000/api/diagnosis";
+        try {
+            postparams.put("symptoms", new JSONArray(symptoms) );
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(
+                Request.Method.POST,
+                url,
+                postparams,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        System.out.println(response);
+                        Iterator<String> iter = response.keys();
+                        while (iter.hasNext()) {
+                            String key = iter.next();
+                            diseaseName.add(key);
+                            System.out.println("key"+key);
+                            try {
+                                Object value = response.get(key);
+                                diseaseProb.add(value.toString());
+                                System.out.println("response"+value);
+                            } catch (JSONException e) {
+                                // Something went wrong!
+                                e.printStackTrace();
+                            }
+                        }
+
+                        callback.onSuccessResponse("ok");
+
+                    }
+                },
+
+        new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("error response");
+                        System.out.println(error);
+                    }
+                });
+        queue.add(jsonObjReq);
 
     }
 }

@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,8 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -25,7 +20,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 
 import org.json.JSONArray;
@@ -146,19 +140,6 @@ public class InputScreen extends AppCompatActivity {
 
             }
         });
-        /*button2 = (Button)findViewById(R.id.btnAdd);
-        button2.setOnClickListener(new View.OnClickListener() {
-           @Override
-                public void onClick(View v) {
-                Spinner spinner= new Spinner(InputScreen.this);
-                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(InputScreen.this, android.R.layout.simple_spinner_dropdown_item, userSymptomsList);
-                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner.setAdapter(spinnerArrayAdapter);
-                linear.addView(spinner);
-
-                  }
-               });*/
-
 
         examineBtn = findViewById(R.id.btnSubmit);
         examineBtn.setOnClickListener(new View.OnClickListener() {
@@ -167,24 +148,20 @@ public class InputScreen extends AppCompatActivity {
                 System.out.println("examine btn click");
                 //user selected symptomslist
                 System.out.println("user selected Symptoms");
-
                 System.out.println(userSymptomsList);
                 //calling api by passing user symptoms
 
-               /* //diagnosis(userSymptomsList);
-                diagnosis(userSymptomsList, new DiagnosisCallback() {
-                    @Override
-                    public void onSuccessResponse(String predicatedDiseaseName) {
+                //diagnosis(userSymptomsList);
 
 
-                        //opening report activity by passing predicated disease name
+                        //opening disease_details activity by passing predicated disease name
                         //opening output activity
-                        Intent intent = new Intent(InputScreen.this, Main3Activity.class);
-                        intent.putExtra("predicatedDiseaseName",predicatedDiseaseName);
+                        Intent intent = new Intent(InputScreen.this, diagnosis_report.class);
+                       // intent.putExtra("predicatedDiseaseName",predicatedDiseaseName);
+                        intent.putExtra("symptomslist",userSymptomsList.toArray(new String[userSymptomsList.size()]));
                         startActivity(intent);
 
-                    }
-                });*/
+
 
 
 
@@ -314,7 +291,7 @@ public class InputScreen extends AppCompatActivity {
     public void  getSymptoms(final VolleyCallback callback) {
         System.out.println("api called");
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://lapzap98.pythonanywhere.com/api/getsymptoms";
+        String url = "http://10.0.2.2:5000/api/getsymptoms";
 
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest (
                 Request.Method.GET,
