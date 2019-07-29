@@ -102,7 +102,12 @@ public class diagnosis_report extends AppCompatActivity {
                             System.out.println("key"+key);
                             try {
                                 Object value = response.get(key);
-                                diseaseProb.add(value.toString());
+                                float percent=Float.parseFloat(value.toString());
+                                System.out.println("float percentage"+percent);
+                               // float percent=(float)value;
+                               // System.out.println("percentage"+percent);
+
+                                diseaseProb.add(Math.round(percent)+"%");
                                 System.out.println("response"+value);
                             } catch (JSONException e) {
                                 // Something went wrong!
