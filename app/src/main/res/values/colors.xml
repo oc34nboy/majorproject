@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#151597</color>
     <color name="colorAccent">#151597</color>
     <color name="title_color">#FFFFFF</color>
-    <color name="colorWhite">#fff</color>
     <color name="greyBorder">#757575</color>
+    <color name="grey">#BDBDBD</color>
+    <color name="textGrey">#757575</color>
+    <color name="colorGreen">#08C792</color>
+    <color name="colorWhite">#fff</color>
+
 </resources>

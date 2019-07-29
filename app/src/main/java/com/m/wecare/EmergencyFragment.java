@@ -13,6 +13,7 @@ public class EmergencyFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        setRetainInstance(false);
         return inflater.inflate(R.layout.fragment_emergency,container,false);
     }
 }

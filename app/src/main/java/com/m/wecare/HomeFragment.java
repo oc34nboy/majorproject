@@ -17,7 +17,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-
+        setRetainInstance(false);
         button = (Button) v.findViewById(R.id.btnFindMe);
         button.setOnClickListener(openProfile);
         return v;

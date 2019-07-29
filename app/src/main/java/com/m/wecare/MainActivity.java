@@ -17,9 +17,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         super.onCreate(savedInstanceState);
 
-        //starting new home fragement as default in starting
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new HomeFragment()).commit();
+
+
+        if(getIntent().getStringExtra("EXTRA")!=null) {
+            switch (getIntent().getStringExtra("EXTRA")) {
+                case "openFragment":
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            new RemainderFragment()).commit();
+                    break;
+            }
+        }else{
+            //starting new home fragement as default in starting
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new HomeFragment()).commit();
+        }
 
 
 //setting bottom navigation
@@ -28,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    public  void restart(){
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new RemainderFragment()).commit();
 
+
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -41,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.emergency:
-                            selectedFragment = new RemainderFragment();
+                            selectedFragment = new EmergencyFragment();
+
                             break;
                         case R.id.remainder:
-                            selectedFragment = new EmergencyFragment();
+                            selectedFragment = new RemainderFragment();
                             break;
                     }
 
