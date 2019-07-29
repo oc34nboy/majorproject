@@ -13,9 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SpinnerTry"></activity>
+        <activity android:name=".disease_detail"></activity>
         <activity android:name=".diagnosis_report" />
-        <activity android:name=".DiagnosisReport" />
         <activity
             android:name=".UserProfile"
             android:parentActivityName=".MainActivity" />

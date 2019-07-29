@@ -26,7 +26,10 @@ public class HomeFragment extends Fragment {
     private View.OnClickListener openProfile = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getActivity(), UserProfile.class);
+            /*Intent intent = new Intent(getActivity(), UserProfile.class);
+            startActivity(intent);*/
+            Intent intent =new Intent(getActivity(),disease_detail.class);
+            intent.putExtra("diseaseName","allergy infection");
             startActivity(intent);
 
         }

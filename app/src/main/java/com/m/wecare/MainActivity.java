@@ -28,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void  openMain1Activity(){
-        System.out.println("Function clicked");
 
-    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {

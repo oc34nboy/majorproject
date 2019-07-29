@@ -242,51 +242,10 @@ public class InputScreen extends AppCompatActivity {
         void onSuccessResponse(List result);
     }
 
-    public interface DiagnosisCallback{
-        void onSuccessResponse(String predicatedDiseaseName);
-    }
 
 
 
 
-    private void diagnosis(List symptoms,final DiagnosisCallback callback) {
-        JSONObject postparams = new JSONObject();
-        RequestQueue queue = Volley.newRequestQueue(this);
-        String url="https://lapzap98.pythonanywhere.com/api/diagnosis";
-        try {
-            postparams.put("symptoms", new JSONArray(symptoms) );
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(
-                Request.Method.POST,
-                url,
-                postparams,
-                new Response.Listener() {
-                    @Override
-                    public void onResponse(Object response) {
-                        System.out.println("got response");
-                        System.out.println("array length:"+response);
-                        String diagnosis=response.toString().split("\\:")[1];
-                        String predicateDiseaseName=diagnosis.replaceAll("[^a-zA-Z0-9\\s+]", "");
-                        callback.onSuccessResponse(predicateDiseaseName);
-
-
-
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        System.out.println("error response");
-                        System.out.println(error);
-                    }
-                });
-        queue.add(jsonObjReq);
-
-    }
 
     public void  getSymptoms(final VolleyCallback callback) {
         System.out.println("api called");
