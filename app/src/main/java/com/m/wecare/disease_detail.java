@@ -10,6 +10,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.m.wecare.remainder.Database.MedicineModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -62,7 +63,7 @@ public class disease_detail extends AppCompatActivity {
     private void getDiseaseDetail(String symptoms, final disease_detail.diseaseDetailCallback callback) {
         JSONObject postparams = new JSONObject();
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url="http://10.0.2.2:5000/api/getDiseaseDetail";
+        String url= MedicineModel.API_URL+"/api/getDiseaseDetail";
         try {
             postparams.put("diseaseName",symptoms);
 

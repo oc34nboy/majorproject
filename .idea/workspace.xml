@@ -16,26 +16,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/EmergencyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/EmergencyFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/HomeScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/RemainderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/RemainderFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/diagnosis_report.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/diagnosis_report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/disease_detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/disease_detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/DBHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/MedicineModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/MedicineModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_botton.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_botton.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/start_circle_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/start_circle_button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pill_layout_listitem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pill_layout_listitem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/profile.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,53 +44,58 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/pillAdd.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_input.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/report_list.xml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/profile.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+            <state relative-caret-position="970">
+              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1024#2000#0" expanded="true" />
+                <element signature="e#1999#2000#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pill_home.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="105">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_remainder.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="76" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="79" />
+            <state relative-caret-position="273">
+              <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/start_circle_button.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-            </state>
-          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -127,33 +123,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_drop_down.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinnertry.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/SpinnerTry.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/edit_text_border.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_itemm_try.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_spinner_try.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/user_input.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/DiagnosisReport.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/diagnosis_report.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/report_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/diagnosis_report.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/disease_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_button_5dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/shadow.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_button_whitebg.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/HomeScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/disease_detail.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/Report_recycleView_adapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_disease_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/RecyleAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/MyService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/DBHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/MedicineModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pill_medicine_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/MedicineDetail.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/RecycleAdapter.java" />
@@ -165,18 +154,25 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Pill_home.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/pill_layout_listitem.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/HomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/EmergencyFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/RemainderFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/pillAdd.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pill_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_botton.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/start_circle_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/pill_layout_listitem.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/DBHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/MedicineModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/diagnosis_report.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/disease_detail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" />
       </list>
     </option>
   </component>
@@ -223,6 +219,14 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="wecare" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="remainder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="major-project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="wecare" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="remainder" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="major-project" type="1abcf292:AndroidViewProjectNode" />
@@ -457,10 +461,10 @@
       <window_info id="Designer" order="3" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.20201342" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.20201342" />
       <window_info id="Resources Explorer" order="7" weight="0.3295302" />
       <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Logcat" order="0" weight="0.9061662" />
+      <window_info anchor="bottom" id="Logcat" order="0" weight="0.48257372" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.78016084" />
       <window_info anchor="bottom" id="Debug" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32841823" />
@@ -469,7 +473,7 @@
       <window_info anchor="bottom" id="Build" order="6" weight="0.1997319" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.6702413" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.5924933" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.10857909" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.04021448" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -479,30 +483,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/SpinnerTry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_border.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/round_button_5dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/round_button_whitebg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -517,38 +497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/diagnosis_report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
-          <folding>
-            <element signature="e#1402#1773#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#4190#4472#0" expanded="true" />
-            <element signature="e#4471#4472#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/Report_recycleView_adapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="52" column="74" selection-start-line="52" selection-start-column="74" selection-end-line="52" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/disease_detail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-          <folding>
-            <element signature="e#1242#1766#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1806#3139#0" expanded="true" />
-            <element signature="e#3138#3139#0" expanded="true" />
-            <element signature="e#2283#2565#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,16 +511,6 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/HomeScreen.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,20 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/DBHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/MedicineModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -667,16 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -750,14 +668,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/capsule.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pill_layout_listitem.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dash_board.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
@@ -783,10 +693,6 @@
           <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_remainder.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/RemainderFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -814,13 +720,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -856,10 +755,99 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pill_layout_listitem.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/InputScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="255" column="42" selection-start-line="255" selection-start-column="42" selection-end-line="255" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/diagnosis_report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="83" column="59" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/remainder/Database/MedicineModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/disease_detail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="46" column="68" lean-forward="true" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/report_list.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_input.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="970">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/m/wecare/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1024#2000#0" expanded="true" />
+            <element signature="e#1999#2000#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_remainder.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>

@@ -20,6 +20,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.m.wecare.remainder.Database.DBHandler;
+import com.m.wecare.remainder.Database.MedicineModel;
+import com.m.wecare.remainder.MedicineDetail;
 
 
 import org.json.JSONArray;
@@ -250,7 +253,7 @@ public class InputScreen extends AppCompatActivity {
     public void  getSymptoms(final VolleyCallback callback) {
         System.out.println("api called");
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://10.0.2.2:5000/api/getsymptoms";
+        String url = MedicineModel.API_URL+"/api/getsymptoms";
 
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest (
                 Request.Method.GET,
