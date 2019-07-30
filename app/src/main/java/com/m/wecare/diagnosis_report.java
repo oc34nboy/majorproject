@@ -1,5 +1,6 @@
 package com.m.wecare;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,10 +29,16 @@ public class diagnosis_report extends AppCompatActivity {
 
  private ArrayList<String> diseaseName=new ArrayList<>();
  private ArrayList<String> diseaseProb=new ArrayList<>();
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.diagnosis_report);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCancelable(false);
+        progressDialog.setTitle("Please Wait..");
+        progressDialog.show();
 
         Intent intent = getIntent();
         String[] predicatedDiseaseName = intent.getStringArrayExtra("symptomslist");
@@ -49,7 +56,7 @@ public class diagnosis_report extends AppCompatActivity {
         diagnosis(userSymptomsList, new DiagnosisCallback() {
                     @Override
                     public void onSuccessResponse(String predicatedDiseaseName) {
-
+                        progressDialog.hide();
                         System.out.println("predicated disease iom diagnosis report ");
                         System.out.println(predicatedDiseaseName);
                         initResult();

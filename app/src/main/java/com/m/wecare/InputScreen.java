@@ -1,5 +1,6 @@
 package com.m.wecare;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -39,16 +40,22 @@ public class InputScreen extends AppCompatActivity {
     List symptomsList=new ArrayList();
     final List<String> userSymptomsList=new ArrayList();
     final List<String> symptomList=new ArrayList<>();
-
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_input);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCancelable(false);
+        progressDialog.setTitle("Please Wait..");
+        progressDialog.show();
         getSymptoms(new VolleyCallback() {
             @Override
             public void onSuccessResponse(final List result) {
+                progressDialog.hide();
 
                 symptomsList = result;
                 symptomsList.add(0,"Select Symptom");
