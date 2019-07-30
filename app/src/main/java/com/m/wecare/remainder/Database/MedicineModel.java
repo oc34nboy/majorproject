@@ -9,8 +9,8 @@ public class MedicineModel {
     public static final String COLUMN_TYPE = "medicineType";
     public static final String COLUMN_DOSAGE="medicineDosage";
     public static final String COLUMN_TIME="medicineTime";
-   // public static final String API_LOCAL_URL="http://10.0.2.2:5000";
-    public static final String API_URL="https://lapzap98.pythonanywhere.com";
+    //public static final String API_URL="http://10.0.2.2:5000"; //local
+    public static final String API_URL="https://lapzap98.pythonanywhere.com"; //web
 
     private int id;
     private String medicineName;

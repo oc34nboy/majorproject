@@ -33,12 +33,13 @@ public class diagnosis_report extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.diagnosis_report);
         progressDialog = new ProgressDialog(this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setCancelable(false);
         progressDialog.setTitle("Please Wait..");
         progressDialog.show();
+        setContentView(R.layout.diagnosis_report);
+
 
         Intent intent = getIntent();
         String[] predicatedDiseaseName = intent.getStringArrayExtra("symptomslist");
