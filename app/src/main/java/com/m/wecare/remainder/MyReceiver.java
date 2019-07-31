@@ -9,14 +9,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
-import android.widget.Toast;
 
 
 import com.m.wecare.R;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
-import static android.support.v4.content.ContextCompat.getSystemService;
 
 public class MyReceiver extends BroadcastReceiver {
     //this class is fired when system notify that event occur
@@ -73,7 +70,7 @@ public class MyReceiver extends BroadcastReceiver {
         Notification notification = new NotificationCompat.Builder(context, DEFAULT_CHANNEL_ID)
                 .setContentTitle("Medicine Remainder")   //Set the title of Notification
                 .setContentText("Take paracetamol ")    //Set the text for notification
-                .setSmallIcon(R.drawable.capsule).build();
+                .setSmallIcon(R.drawable.capsule_v1).build();
 
         //Send the notification.
         mNotificationManager.notify(1, notification);

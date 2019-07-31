@@ -20,6 +20,9 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(MedicineModel.CREATE_TABLE);
+        System.out.println("medicine model created");
+        db.execSQL(TimeModel.CREATE_TABLE);
+        System.out.println("time db created");
 
     }
 

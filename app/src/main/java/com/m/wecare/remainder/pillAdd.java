@@ -28,8 +28,11 @@ import com.m.wecare.R;
 import com.m.wecare.RemainderFragment;
 import com.m.wecare.remainder.Database.DBHandler;
 import com.m.wecare.remainder.Database.MedicineModel;
+import com.m.wecare.remainder.Database.TimeModel;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class pillAdd extends AppCompatActivity {
 
@@ -44,6 +47,8 @@ public class pillAdd extends AppCompatActivity {
     TextInputEditText medicinename,medicineDosage;
     Spinner medicinetype;
     ChipGroup medicineTime;
+
+    private List<String> medicineTimeList=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +128,7 @@ public class pillAdd extends AppCompatActivity {
             for(int i=0;i<timeCount;i++){
                 Chip chip=(Chip)medicineTime.getChildAt(i);
                 timeList+=chip.getText()+",";
+                medicineTimeList.add(chip.getText().toString());
                 System.out.println("data at chup"+i+chip.getText());
 
             }
@@ -130,7 +136,7 @@ public class pillAdd extends AppCompatActivity {
             System.out.println("data list"+timeList);
 
 
-            insertData(name,dosage,type,timeList);
+            insertData(name,dosage,type,medicineTimeList);
 
             //open the alarm list menu back
            // Intent intent=new Intent(pillAdd.this, RemainderFragment.class);
@@ -166,7 +172,7 @@ public class pillAdd extends AppCompatActivity {
     };
 
 
-    private void insertData(String name,String dosage,String type, String time) {
+    private void insertData(String name, String dosage, String type, List<String> time) {
         //insertint to db
 
         DBHandler dbhandler=new DBHandler(pillAdd.this);
@@ -178,17 +184,28 @@ public class pillAdd extends AppCompatActivity {
         value.put(MedicineModel.COLUMN_NAME,name);
         value.put(MedicineModel.COLUMN_DOSAGE,dosage);
         value.put(MedicineModel.COLUMN_TYPE,type);
-        value.put(MedicineModel.COLUMN_TIME,time);
 
         //inserting in db
         long id = db.insert(MedicineModel.TABLE_NAME, null, value);
         System.out.println("row inserted is "+id);
+
+        //inserting time in
+        for(String e:time){
+            ContentValues value2=new ContentValues();
+            value2.put(TimeModel.COLUMN_MEDICINE_ID,id);
+            value2.put(TimeModel.COLUMN_TIME,e);
+            long id2 = db.insert(TimeModel.TABLE_NAME, null, value2);
+            System.out.println("row inserted is "+id2);
+        }
+
+
+
         // close db connection
         db.close();
         //registering event
         System.out.println("database insertion completion");
 
-        registerAlarm(((int) id),time);
+        registerAlarm(((int) id),time.get(0));
 
 
 
@@ -239,7 +256,9 @@ public class pillAdd extends AppCompatActivity {
                 public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                     //eReminderTime.setText( selectedHour + ":" + selectedMinute);
                     String am_pm = (selectedHour < 12) ? " AM" : " PM";
-                    setTag(selectedHour + ":" + selectedMinute+am_pm);
+                    String hh=(selectedHour<10)? "0"+selectedHour:selectedHour+"";
+                    String mm=(selectedMinute<10)? "0"+selectedMinute:selectedMinute+"";
+                    setTag(hh + ":" + mm);
                     hrs=selectedHour;
                     min=selectedMinute;
                 }

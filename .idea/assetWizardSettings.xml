@@ -29,12 +29,37 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                     </map>
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="G:\major-project\app\src\main\res\drawable-mdpi\capsule_v2.png" />
                                       <entry key="outputName" value="icdrop_down" />
-                                      <entry key="themeColor" value="ffffff" />
+                                      <entry key="theme" value="CUSTOM" />
+                                      <entry key="themeColor" value="33fff8" />
                                     </map>
                                   </option>
                                 </PersistentState>

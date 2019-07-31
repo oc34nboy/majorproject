@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:background="@drawable/drop_shadow"
+    android:background="@color/colorWhite"
     android:padding="20dp"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="10dp"
@@ -11,9 +11,9 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:src="@drawable/capsule" />
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/icdrop_down"/>
 
 
 
@@ -27,12 +27,13 @@
         >
 
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            android:textFontWeight="400"
+            android:text="Vitamins"
+            android:textColor="@color/colorBlack"
             android:textSize="23sp"
-            android:id="@+id/name"
-            android:textStyle="bold"
 
 
             />
@@ -42,34 +43,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
+            android:text="Take 40mg"
             android:textSize="17sp" />
 
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="27dp"
-            android:src="@drawable/clock"
-            android:layout_gravity="center"/>
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/grey"
+            android:textColor="@color/colorBlack"
+            android:textStyle="normal"
             android:layout_marginTop="10dp"
-            android:textSize="13dp"
+            android:text="7:00 AM"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
             />
 
 
-    </LinearLayout>
+
 
 
 </RelativeLayout>

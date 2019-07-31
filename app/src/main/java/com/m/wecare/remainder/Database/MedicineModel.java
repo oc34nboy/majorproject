@@ -1,5 +1,8 @@
 package com.m.wecare.remainder.Database;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MedicineModel {
 
     public static final String TABLE_NAME = "Medicinedb";
@@ -17,14 +20,15 @@ public class MedicineModel {
     private String medicineType;
     private String medicineDosage;
     private String medicineTime;
+    private List<String> time=new ArrayList<>();
+
 
     public static final String CREATE_TABLE=
             "CREATE TABLE " + TABLE_NAME +"("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_NAME+ " VARCHAR(100),"
                     + COLUMN_TYPE+ " VARCHAR(50),"
-                    + COLUMN_DOSAGE +" VARCHAR(50),"
-                    + COLUMN_TIME+" VARCHAR(100)"
+                    + COLUMN_DOSAGE +" VARCHAR(50)"
                     + ")";
 
 
@@ -67,5 +71,12 @@ public class MedicineModel {
 
     public void setMedicineTime(String medicineTime) {
         this.medicineTime = medicineTime;
+    }
+    public List<String> getTime() {
+        return time;
+    }
+
+    public void setTime(List<String> time) {
+        this.time = time;
     }
 }
