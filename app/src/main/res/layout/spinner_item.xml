@@ -1,6 +1,6 @@
 <Spinner android:id="@+id/spinner"
     android:layout_width="match_parent"
-    android:layout_height="56dp"
+    android:layout_height="50dp"
     android:layout_marginBottom="25dp"
     android:paddingLeft="5dp"
     android:paddingRight="10dp"

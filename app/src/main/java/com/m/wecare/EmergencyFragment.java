@@ -14,6 +14,7 @@ public class EmergencyFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setRetainInstance(false);
+        getActivity().setTitle("Emergency Contacts");
         return inflater.inflate(R.layout.fragment_emergency,container,false);
     }
 }

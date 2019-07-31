@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_height="match_parent" android:layout_width="match_parent">
     
 
@@ -63,19 +64,18 @@
 
     </LinearLayout>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/addSpinnerBtn"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
         android:background="@drawable/round_botton"
         android:text="Add symptom"
         android:textSize="11sp"
         android:textColor="#ffffff"
         />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="60dp"

@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.m.wecare.R;
 
+import static android.content.Context.BIND_IMPORTANT;
 import static android.content.Context.NOTIFICATION_SERVICE;
 import static android.support.v4.content.ContextCompat.getSystemService;
 
@@ -69,6 +70,7 @@ public class MyReceiver extends BroadcastReceiver {
         NotificationManager   mNotificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         createNotificationChannel(mNotificationManager);
 
+
         //2.Build Notification with NotificationCompat.Builder
         Notification notification = new NotificationCompat.Builder(context, DEFAULT_CHANNEL_ID)
                 .setContentTitle("Medicine Remainder")   //Set the title of Notification
@@ -76,6 +78,7 @@ public class MyReceiver extends BroadcastReceiver {
                 .setSmallIcon(R.drawable.capsule).build();
 
         //Send the notification.
+
         mNotificationManager.notify(1, notification);
 
     }
@@ -89,7 +92,7 @@ public class MyReceiver extends BroadcastReceiver {
             //Create channel only if it is not already created
             if (notificationManager.getNotificationChannel(DEFAULT_CHANNEL_ID) == null) {
                 notificationManager.createNotificationChannel(new NotificationChannel(
-                        DEFAULT_CHANNEL_ID, DEFAULT_CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT
+                        DEFAULT_CHANNEL_ID, DEFAULT_CHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH
                 ));
             }
         }

@@ -48,7 +48,8 @@ public class RemainderFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         System.out.println("remainder fragement");
-         v=inflater.inflate(R.layout.pill_home,container,false);
+        getActivity().setTitle("Medicine Reminder");
+        v=inflater.inflate(R.layout.pill_home,container,false);
         setRetainInstance(false);
         //add btn
         noDataMessage=v.findViewById(R.id.noDataMessage);

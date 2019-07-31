@@ -18,6 +18,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         setRetainInstance(false);
+        getActivity().setTitle("WeCare");
         button = (Button) v.findViewById(R.id.btnFindMe);
         button.setOnClickListener(openProfile);
         return v;

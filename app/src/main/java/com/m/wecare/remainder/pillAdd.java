@@ -2,7 +2,7 @@ package com.m.wecare.remainder;
 
 
 import android.app.AlarmManager;
-import android.app.FragmentTransaction;
+
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
@@ -14,7 +14,7 @@ import android.os.Bundle;
 import android.support.design.chip.Chip;
 import android.support.design.chip.ChipGroup;
 import android.support.design.widget.TextInputEditText;
-import android.support.v4.app.FragmentManager;
+
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
@@ -25,7 +25,7 @@ import android.widget.TimePicker;
 
 import com.m.wecare.MainActivity;
 import com.m.wecare.R;
-import com.m.wecare.RemainderFragment;
+
 import com.m.wecare.remainder.Database.DBHandler;
 import com.m.wecare.remainder.Database.MedicineModel;
 

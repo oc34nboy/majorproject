@@ -12,7 +12,9 @@
     <style name="roundedBtn" parent="Widget.AppCompat.Button.Colored">
         <item name="android:background">@drawable/round_botton</item>
     </style>
+<style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
 
+</style>
 
 
 
