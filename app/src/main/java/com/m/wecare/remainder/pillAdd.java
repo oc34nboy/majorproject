@@ -56,6 +56,10 @@ public class pillAdd extends AppCompatActivity {
         setContentView(R.layout.pill_add);
         setTitle("New MedicineModel");
         System.out.println("starting input activity");
+
+        int time=getIntent().getIntExtra("time",0);
+        System.out.println("the time going to be added  -----------"+time);
+
         //getting component object
         medicinename=findViewById(R.id.pill_name);
        medicineDosage=findViewById(R.id.pill_dosage);

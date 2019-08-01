@@ -25,6 +25,7 @@ import com.m.wecare.remainder.Database.MedicineModel;
 import com.m.wecare.remainder.Database.TimeModel;
 import com.m.wecare.remainder.RecycleAdapter;
 import com.m.wecare.remainder.pillAdd;
+import com.m.wecare.remainder.pillAddV2;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -34,10 +35,10 @@ import java.util.List;
 
 public class RemainderFragment extends Fragment {
 
-    Button btnStartAlarm, btnCancelAlarm;
 
-    AlarmManager alarmManager;
-    PendingIntent pendingIntent;
+    private TextView addMorning,addAfternoon,addEvening;
+
+
     private ArrayList<Integer> imageId=new ArrayList<>();
     //morning
     private ArrayList<String> MmedicineName=new ArrayList<>();
@@ -64,27 +65,58 @@ public class RemainderFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         System.out.println("remainder fragement");
-         v=inflater.inflate(R.layout.pill_home,container,false);
+        v=inflater.inflate(R.layout.pill_home,container,false);
         setRetainInstance(false);
         //add btn
         noDataMessage=v.findViewById(R.id.noDataMessage);
-        addBtn =v.findViewById(R.id.pill_addBtn);
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("btn clicked");
 
-                //opening input screen activity
-                Intent intent=new Intent(getActivity(), pillAdd.class);
-                startActivity(intent);
-            }
-        });
+        addMorning=v.findViewById(R.id.addMorning);
+        addAfternoon=v.findViewById(R.id.addAfternoon);
+        addEvening=v.findViewById(R.id.addEvening);
+
+        addMorning.setOnClickListener(addMorningHandler);
+        addAfternoon.setOnClickListener(addAfternoonHandler);
+        addEvening.setOnClickListener(addEveningHandler);
+
         //recycle view
         initData();
 
-
         return  v;
     }
+
+
+    private View.OnClickListener addMorningHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+                    addReminder(0);
+        }
+    };
+
+    private View.OnClickListener addAfternoonHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            addReminder(1);
+        }
+    };
+
+
+    private View.OnClickListener addEveningHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            addReminder(2);
+        }
+    };
+
+    private void addReminder(int time){
+        //opening addpill activity
+        //opening input screen activity
+        Intent intent=new Intent(getActivity(), pillAddV2.class);
+        intent.putExtra("time",time);
+        startActivity(intent);
+
+
+    }
+
 
     private void initData() {
 
@@ -134,7 +166,7 @@ public class RemainderFragment extends Fragment {
                 }
 
                 if (model.getMedicineType().equals("Capsule")) {
-                    imageId.add(R.drawable.capsule_v1);
+                    imageId.add(R.drawable.capsule_1);
                 } else {
                     imageId.add(R.drawable.bottle);
                 }
