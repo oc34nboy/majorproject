@@ -34,12 +34,8 @@ public class MedicineDetail extends AppCompatActivity {
         nameText.setText(name);
         dosageText.setText(dosage);
         timeText.setText(time);
+        typeImageView.setImageResource(R.drawable.capsule_large);
 
-        if(type.equals("Capsule")) {
-            typeImageView.setImageResource(R.drawable.capsule_large);
-        }else{
-            typeImageView.setImageResource(R.drawable.bottle_large);
-        }
 
 
 

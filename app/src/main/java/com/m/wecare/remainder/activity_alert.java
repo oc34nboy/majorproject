@@ -80,7 +80,6 @@ public class activity_alert extends AppCompatActivity {
             // prepare note object
             mn.setMedicineName(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_NAME)));
             mn.setMedicineDosage(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_DOSAGE)));
-            mn.setMedicineType(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_TYPE)));
             mn.setMedicineTime(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_TIME)));
 
         }

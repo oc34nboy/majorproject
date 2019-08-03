@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -34,16 +35,18 @@ import java.util.List;
 
 public class pillAddV2 extends AppCompatActivity {
 
-    private static int hrs,min;
+    private static int hrs,min,icon;
 
 
     AlarmManager alarmManager;
     PendingIntent pendingIntent;
 
-    String[] MedicineType={"Medicine Type","Capsule","Liquid"};
+    String[] MedicineType={"Medicine Time","Before BreakFast","After BreakFast"};
+    String[] dosage={"Dosage","capsule","ml"};
     Button addMedicineBtn,cancelBtn;
-    TextInputEditText medicinename,medicineDosage;
-    Spinner medicinetype,pill_type;
+    EditText medicinename,medicineDosage,addTimeBtn;
+    Spinner medicinetype,pill_type,pill_icon_spinner,pill_eat_spinner;
+
 
 
     private List<String> medicineTimeList=new ArrayList<>();
@@ -60,21 +63,18 @@ public class pillAddV2 extends AppCompatActivity {
 
         //getting component object
         medicinename=findViewById(R.id.pill_name);
-       medicineDosage=findViewById(R.id.pill_dosage);
-
-
+        medicineDosage=findViewById(R.id.pill_dosage);
         medicinetype=findViewById(R.id.pill_type);
-
-
+        addTimeBtn=findViewById(R.id.addTimeBtn);
 
         addMedicineBtn=findViewById(R.id.addMedicineBtn);
-       cancelBtn=findViewById(R.id.cancelBtn);
+        cancelBtn=findViewById(R.id.cancelBtn);
 
 
         //setting event handling
         addMedicineBtn.setOnClickListener(addMedicineBtnHandler);
-
         cancelBtn.setOnClickListener(cancelHandler);
+        addTimeBtn.setOnClickListener(addTimeHandler);
 
 
 
@@ -83,47 +83,83 @@ public class pillAddV2 extends AppCompatActivity {
 
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
-        Spinner spin = (Spinner) findViewById(R.id.pill_type);
-        Spinner spin2=findViewById(R.id.pill_type1);
+         pill_eat_spinner = (Spinner) findViewById(R.id.pill_eat);
+
 //Creating the ArrayAdapter instance having the bank name list
-        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,MedicineType);
-        aa.setDropDownViewResource(R.layout.spinner_item_input);
+        ArrayAdapter adapter1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,MedicineType);
+        adapter1.setDropDownViewResource(R.layout.spinner_item_input);
 //Setting the ArrayAdapter data on the Spinner
-        spin.setAdapter(aa);
-        spin2.setAdapter(aa);
+        pill_eat_spinner.setAdapter(adapter1);
+        ArrayAdapter adapter2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,dosage);
+        adapter2.setDropDownViewResource(R.layout.spinner_item_input);
 
-       spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-           @Override
-           public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               ((TextView) view).setTextColor(getResources().getColor(R.color.lightGrey));
-           }
 
-           @Override
-           public void onNothingSelected(AdapterView<?> parent) {
 
-           }
-       });
+
+        pill_eat_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0) {
+                    ((TextView) view).setTextColor(getResources().getColor(R.color.lightGrey));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        //spinner try
+
+        ArrayList<ItemData> list=new ArrayList<>();
+        list.add(new ItemData(MedicineModel.icon_list[0]));
+        list.add(new ItemData(MedicineModel.icon_list[1]));
+        list.add(new ItemData(MedicineModel.icon_list[2]));
+        list.add(new ItemData(MedicineModel.icon_list[3]));
+        list.add(new ItemData(MedicineModel.icon_list[4]));
+        list.add(new ItemData(MedicineModel.icon_list[5]));
+        list.add(new ItemData(MedicineModel.icon_list[6]));
+
+         pill_icon_spinner=findViewById(R.id.pill_icon);
+        SpinnerAdapter adapter=new SpinnerAdapter(this,list);
+        pill_icon_spinner.setAdapter(adapter);
+
+
 
     }
 
 
 
-
-    private void setTag(final String name) {
-        final ChipGroup chipGroup = findViewById(R.id.pill_time);
-
-        final String tagName = name;
-        final Chip chip = new Chip(this);
-        int paddingDp = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 10,
-                getResources().getDisplayMetrics()
-        );
-        chip.setPadding(paddingDp, paddingDp, paddingDp, paddingDp);
-        chip.setText(tagName);
-        chipGroup.addView(chip);
-    }
 
     //event handler
+
+    //add time handler
+    private View.OnClickListener addTimeHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Calendar mcurrentTime = Calendar.getInstance();
+            int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+            int minute = mcurrentTime.get(Calendar.MINUTE);
+            TimePickerDialog mTimePicker;
+            mTimePicker = new TimePickerDialog(pillAddV2.this, new TimePickerDialog.OnTimeSetListener() {
+                @Override
+                public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                    //eReminderTime.setText( selectedHour + ":" + selectedMinute);
+                    String am_pm = (selectedHour < 12) ? " AM" : " PM";
+                    String hh=(selectedHour<10)? "0"+selectedHour:selectedHour+"";
+                    String mm=(selectedMinute<10)? "0"+selectedMinute:selectedMinute+"";
+                    addTimeBtn.setText(hh+":"+mm+am_pm);
+                    hrs=selectedHour;
+                    min=selectedMinute;
+                }
+            }, hour, minute, true);//Yes 24 hour time
+            mTimePicker.setTitle("Select Time");
+            mTimePicker.show();
+
+        }
+    };
     //add medicine Handler
     private View.OnClickListener addMedicineBtnHandler=new View.OnClickListener() {
         @Override
@@ -131,18 +167,22 @@ public class pillAddV2 extends AppCompatActivity {
             System.out.println("btn clicked");
 
             //getting data from ui
-            String name,type,dosage,time;
+            String name,dosage,eatTime,pillTime;
+            long icon;
 
             name=medicinename.getText().toString();
             dosage=medicineDosage.getText().toString();
-            type=medicinetype.getSelectedItem().toString();
-            System.out.println("Medine Name"+name+"dosage "+dosage+"tyoe of medicine "+type);
+            pillTime=addTimeBtn.getText().toString();
+            eatTime=pill_eat_spinner.getSelectedItem().toString();
+            icon=pill_icon_spinner.getSelectedItemId();
+
+
 
            //get medicine time
             System.out.println("data list");
 
 
-            insertData(name,dosage,type,medicineTimeList);
+            insertData(name,dosage,eatTime,icon,pillTime);
 
             //open the alarm list menu back
            // Intent intent=new Intent(pillAdd.this, RemainderFragment.class);
@@ -178,7 +218,7 @@ public class pillAddV2 extends AppCompatActivity {
     };
 
 
-    private void insertData(String name, String dosage, String type, List<String> time) {
+    private void insertData(String name, String dosage, String eatTime, long icon, String time) {
         //insertint to db
 
         DBHandler dbhandler=new DBHandler(pillAddV2.this);
@@ -189,20 +229,21 @@ public class pillAddV2 extends AppCompatActivity {
         ContentValues value = new ContentValues();
         value.put(MedicineModel.COLUMN_NAME,name);
         value.put(MedicineModel.COLUMN_DOSAGE,dosage);
-        value.put(MedicineModel.COLUMN_TYPE,type);
+        value.put(MedicineModel.COLUMN_NOTE,eatTime);
+        value.put(MedicineModel.COLUMN_ICON,icon);
 
         //inserting in db
         long id = db.insert(MedicineModel.TABLE_NAME, null, value);
         System.out.println("row inserted is "+id);
 
         //inserting time in
-        for(String e:time){
+
             ContentValues value2=new ContentValues();
             value2.put(TimeModel.COLUMN_MEDICINE_ID,id);
-            value2.put(TimeModel.COLUMN_TIME,e);
+            value2.put(TimeModel.COLUMN_TIME,time);
             long id2 = db.insert(TimeModel.TABLE_NAME, null, value2);
             System.out.println("row inserted is "+id2);
-        }
+
 
 
 
@@ -211,7 +252,7 @@ public class pillAddV2 extends AppCompatActivity {
         //registering event
         System.out.println("database insertion completion");
 
-        registerAlarm(((int) id),time.get(0));
+        registerAlarm(((int) id),time);
 
 
 
@@ -248,32 +289,6 @@ public class pillAddV2 extends AppCompatActivity {
 
     }
 
-    //adding time from timepicker and setting into tag component
-    private View.OnClickListener addMedicineTimeHandler=new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-            Calendar mcurrentTime = Calendar.getInstance();
-            int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-            int minute = mcurrentTime.get(Calendar.MINUTE);
-            TimePickerDialog mTimePicker;
-            mTimePicker = new TimePickerDialog(pillAddV2.this, new TimePickerDialog.OnTimeSetListener() {
-                @Override
-                public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                    //eReminderTime.setText( selectedHour + ":" + selectedMinute);
-                    String am_pm = (selectedHour < 12) ? " AM" : " PM";
-                    String hh=(selectedHour<10)? "0"+selectedHour:selectedHour+"";
-                    String mm=(selectedMinute<10)? "0"+selectedMinute:selectedMinute+"";
-                    setTag(hh + ":" + mm);
-                    hrs=selectedHour;
-                    min=selectedMinute;
-                }
-            }, hour, minute, true);//Yes 24 hour time
-            mTimePicker.setTitle("Select Time");
-            mTimePicker.show();
-
-        }
-    };
 
     //cancel btn handler
 

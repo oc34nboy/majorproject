@@ -19,110 +19,106 @@
         android:textStyle="bold"
         android:gravity="center"/>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/input1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/pill_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Medicine Name" />
-    </android.support.design.widget.TextInputLayout>
-
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/input2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/pill_dosage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberSigned"
-            android:hint="Medicine Dosage" />
-    </android.support.design.widget.TextInputLayout>
-
-
-    <Spinner
-        android:id="@+id/pill_type"
+    <EditText
+        android:id="@+id/pill_name"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
+        android:hint="Medicine name"
+        android:paddingStart="10dp"
         android:layout_marginBottom="20dp"
-
-
+       android:background="@drawable/edittext_style"
         />
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/pill_dosage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Medicine Dosage"
+            android:paddingStart="10dp"
+            android:inputType="numberSigned"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittext_style"
+            />
+
+
+
+
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
-        <android.support.design.widget.TextInputLayout
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_centerInParent="true"
+            android:background="@drawable/drawable_spinner_border"
+            android:layout_marginBottom="20dp"
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp">
+            tools:ignore="UselessParent">
 
-            <android.support.design.widget.TextInputEditText
-
+            <Spinner
+                android:id="@+id/pill_eat"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberSigned"
-                android:hint="Medicine Dosage" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="60dp"
+                android:backgroundTint="@color/greyBorder"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown" />
 
 
-        <android.support.design.widget.TextInputLayout
+        </LinearLayout>
 
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_centerInParent="true"
+            android:background="@drawable/drawable_spinner_border"
+            android:layout_marginBottom="20dp"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_marginLeft="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp">
+            tools:ignore="UselessParent">
 
-            <android.support.design.widget.TextInputEditText
-
+            <Spinner
+                android:id="@+id/pill_icon"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberSigned"
-                android:hint="Medicine Dosage" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="60dp"
+                android:backgroundTint="@color/greyBorder"
+                />
 
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_centerInParent="true"
-        android:background="@drawable/drawable_spinner_border"
-        android:translationZ="1dp"
-        android:layout_width="match_parent" android:layout_height="wrap_content" tools:ignore="UselessParent">
-
-        <Spinner
-            android:id="@+id/pill_type1"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/linearLayout"
-            android:layout_alignTop="@+id/linearLayout"
-            android:backgroundTint="@color/greyBorder"
-            android:overlapAnchor="false"
-            android:spinnerMode="dropdown" />
+        </LinearLayout>
 
 
     </LinearLayout>
+
+
+
+   <EditText
+       android:id="@+id/addTimeBtn"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:hint="Select Time"
+       android:paddingStart="10dp"
+      android:editable="false"
+       android:background="@drawable/edittext_style"
+       />
+
+
+
+
 
 
 

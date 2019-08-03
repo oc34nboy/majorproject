@@ -39,7 +39,9 @@ public class RemainderFragment extends Fragment {
     private TextView addMorning,addAfternoon,addEvening;
 
 
-    private ArrayList<Integer> imageId=new ArrayList<>();
+    private ArrayList<Integer> MimageId=new ArrayList<>();
+    private ArrayList<Integer> AimageId=new ArrayList<>();
+    private ArrayList<Integer> EimageId=new ArrayList<>();
     //morning
     private ArrayList<String> MmedicineName=new ArrayList<>();
     private ArrayList<String> MmedicineDosage=new ArrayList<>();
@@ -70,13 +72,12 @@ public class RemainderFragment extends Fragment {
         //add btn
         noDataMessage=v.findViewById(R.id.noDataMessage);
 
-        addMorning=v.findViewById(R.id.addMorning);
-        addAfternoon=v.findViewById(R.id.addAfternoon);
-        addEvening=v.findViewById(R.id.addEvening);
+        addBtn=v.findViewById(R.id.pill_addBtn);
+        addBtn.setOnClickListener(addReminderHandler);
 
-        addMorning.setOnClickListener(addMorningHandler);
-        addAfternoon.setOnClickListener(addAfternoonHandler);
-        addEvening.setOnClickListener(addEveningHandler);
+
+
+
 
         //recycle view
         initData();
@@ -85,33 +86,18 @@ public class RemainderFragment extends Fragment {
     }
 
 
-    private View.OnClickListener addMorningHandler=new View.OnClickListener() {
+    private View.OnClickListener addReminderHandler=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-                    addReminder(0);
-        }
-    };
-
-    private View.OnClickListener addAfternoonHandler=new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            addReminder(1);
+                    addReminder();
         }
     };
 
 
-    private View.OnClickListener addEveningHandler=new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            addReminder(2);
-        }
-    };
-
-    private void addReminder(int time){
+    private void addReminder(){
         //opening addpill activity
         //opening input screen activity
         Intent intent=new Intent(getActivity(), pillAddV2.class);
-        intent.putExtra("time",time);
         startActivity(intent);
 
 
@@ -140,37 +126,40 @@ public class RemainderFragment extends Fragment {
                 }
                 int timeOfDay = cl.get(Calendar.HOUR_OF_DAY);
                 int minOfDay=cl.get(Calendar.MINUTE);
-                String time=timeOfDay%12 + ":" + minOfDay + " " + ((timeOfDay>=12) ? "PM" : "AM");
 
 
                 if(timeOfDay >= 0 && timeOfDay < 12){
                     //morning time
                     MmedicineName.add(model.getMedicineName());
                     MmedicineDosage.add(model.getMedicineDosage());
-                    MmedicineTime.add(time);
+                    MmedicineTime.add(model.getMedicineTime());
                     MmedicineType.add(model.getMedicineType());
+                    MimageId.add(MedicineModel.icon_list[model.getIconType()]);
 
                 }else if(timeOfDay >= 12 && timeOfDay < 16){
                         //afternoon
                     AmedicineName.add(model.getMedicineName());
                     AmedicineDosage.add(model.getMedicineDosage());
-                    AmedicineTime.add(time);
+                    AmedicineTime.add(model.getMedicineTime());
                     AmedicineType.add(model.getMedicineType());
+                    AimageId.add(MedicineModel.icon_list[model.getIconType()]);
                 }else if(timeOfDay >= 16 && timeOfDay < 24){
                     //evening
                     EmedicineName.add(model.getMedicineName());
                     EmedicineDosage.add(model.getMedicineDosage());
-                    EmedicineTime.add(time);
+                    EmedicineTime.add(model.getMedicineTime());
                     EmedicineType.add(model.getMedicineType());
+                    EimageId.add(MedicineModel.icon_list[model.getIconType()]);
+
+
 
                 }
 
-                if (model.getMedicineType().equals("Capsule")) {
-                    imageId.add(R.drawable.capsule_1);
-                } else {
-                    imageId.add(R.drawable.bottle);
-                }
+
+
+
             }
+
             initRecyclerView();
         }
 
@@ -182,7 +171,7 @@ public class RemainderFragment extends Fragment {
 
         List<MedicineModel> medicineList=new ArrayList<>();
         //getting data from dataset
-        String query= "SELECT Medicinedb.id,medicineName,medicineType,medicineDosage,Timedb.medicineTime FROM Medicinedb INNER JOIN Timedb ON medicinedb.id=Timedb.medicineId";
+        String query= "SELECT Medicinedb.id,medicineName,iconType,medicineDosage,Timedb.medicineTime FROM Medicinedb INNER JOIN Timedb ON medicinedb.id=Timedb.medicineId";
         DBHandler dbhandler=new DBHandler(getActivity());
         SQLiteDatabase db = dbhandler.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
@@ -192,7 +181,8 @@ public class RemainderFragment extends Fragment {
                 MedicineModel mn=new MedicineModel();
                 mn.setMedicineName(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_NAME)));
                 mn.setMedicineDosage(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_DOSAGE)));
-                mn.setMedicineType(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_TYPE)));
+               // mn.setMedicineType(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_TYPE)));
+                mn.setIconType(cursor.getInt(cursor.getColumnIndex(MedicineModel.COLUMN_ICON)));
                 mn.setMedicineTime(cursor.getString(cursor.getColumnIndex(TimeModel.COLUMN_TIME)));
                 medicineList.add(mn);
             } while (cursor.moveToNext());
@@ -204,18 +194,18 @@ public class RemainderFragment extends Fragment {
     private void initRecyclerView() {
 
         RecyclerView recyclerView = v.findViewById(R.id.recycle_view);
-        RecycleAdapter adapter = new RecycleAdapter(getContext(),imageId,MmedicineName,MmedicineDosage,MmedicineType,MmedicineTime);
+        RecycleAdapter adapter = new RecycleAdapter(getContext(),MimageId,MmedicineName,MmedicineDosage,MmedicineType,MmedicineTime);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
         RecyclerView recyclerView1 = v.findViewById(R.id.recycle_view2);
-        RecycleAdapter adapter1 = new RecycleAdapter(getContext(),imageId,AmedicineName,AmedicineDosage,AmedicineType,AmedicineTime);
+        RecycleAdapter adapter1 = new RecycleAdapter(getContext(),AimageId,AmedicineName,AmedicineDosage,AmedicineType,AmedicineTime);
         recyclerView1.setAdapter(adapter1);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
 
         RecyclerView recyclerView3 = v.findViewById(R.id.recycle_view3);
-        RecycleAdapter adapter3 = new RecycleAdapter(getContext(),imageId,EmedicineName,EmedicineDosage,EmedicineType,EmedicineTime);
+        RecycleAdapter adapter3 = new RecycleAdapter(getContext(),EimageId,EmedicineName,EmedicineDosage,EmedicineType,EmedicineTime);
         recyclerView3.setAdapter(adapter3);
         recyclerView3.setLayoutManager(new LinearLayoutManager(getContext()));
     }
