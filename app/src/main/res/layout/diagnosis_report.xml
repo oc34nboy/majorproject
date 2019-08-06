@@ -7,24 +7,38 @@
     android:orientation="vertical"
     tools:context=".diagnosis_report">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/openMap"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Diagnosis Report"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="25dp"
-        android:textColor="@color/colorPrimary"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="60dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/nearbysearch">
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:src="@drawable/locationicon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/searchIcon"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:text="Search Nearby Hospital"/>
+
+
+
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
         android:id="@+id/report_recycleView" >
-
     </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

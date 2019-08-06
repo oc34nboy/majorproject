@@ -2,10 +2,14 @@ package com.m.wecare;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -29,10 +33,12 @@ public class diagnosis_report extends AppCompatActivity {
 
  private ArrayList<String> diseaseName=new ArrayList<>();
  private ArrayList<String> diseaseProb=new ArrayList<>();
+ RelativeLayout openMap;
     ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+         setTitle("Diagnosis Report");
         progressDialog = new ProgressDialog(this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setCancelable(false);
@@ -48,9 +54,21 @@ public class diagnosis_report extends AppCompatActivity {
 
         getData(predicatedDiseaseName);
 
-
+        openMap=findViewById(R.id.openMap);
+        openMap.setOnClickListener(openMapHandler);
 
     }
+
+    private View.OnClickListener openMapHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+
+
+
+
+        }
+    };
 
     private void getData(String[] userSymptomsList) {
 

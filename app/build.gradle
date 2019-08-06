@@ -32,5 +32,4 @@ dependencies {
     implementation "me.rishabhkhanna:CustomToggle:1.0.0"
 
 
-
 }
