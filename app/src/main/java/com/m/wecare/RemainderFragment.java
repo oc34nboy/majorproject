@@ -38,6 +38,9 @@ public class RemainderFragment extends Fragment {
 
     private TextView addMorning,addAfternoon,addEvening;
 
+    private ArrayList<Integer> MId=new ArrayList<>();
+    private ArrayList<Integer> AId=new ArrayList<>();
+    private ArrayList<Integer> EId=new ArrayList<>();
 
     private ArrayList<Integer> MimageId=new ArrayList<>();
     private ArrayList<Integer> AimageId=new ArrayList<>();
@@ -68,6 +71,7 @@ public class RemainderFragment extends Fragment {
 
         System.out.println("remainder fragement");
         v=inflater.inflate(R.layout.pill_home,container,false);
+        getActivity().setTitle("Medicine Reminder");
         setRetainInstance(false);
         //add btn
         noDataMessage=v.findViewById(R.id.noDataMessage);
@@ -130,6 +134,7 @@ public class RemainderFragment extends Fragment {
 
                 if(timeOfDay >= 0 && timeOfDay < 12){
                     //morning time
+                    MId.add(model.getId());
                     MmedicineName.add(model.getMedicineName());
                     MmedicineDosage.add(model.getMedicineDosage());
                     MmedicineTime.add(model.getMedicineTime());
@@ -138,6 +143,7 @@ public class RemainderFragment extends Fragment {
 
                 }else if(timeOfDay >= 12 && timeOfDay < 16){
                         //afternoon
+                    AId.add(model.getId());
                     AmedicineName.add(model.getMedicineName());
                     AmedicineDosage.add(model.getMedicineDosage());
                     AmedicineTime.add(model.getMedicineTime());
@@ -145,6 +151,7 @@ public class RemainderFragment extends Fragment {
                     AimageId.add(MedicineModel.icon_list[model.getIconType()]);
                 }else if(timeOfDay >= 16 && timeOfDay < 24){
                     //evening
+                    EId.add(model.getId());
                     EmedicineName.add(model.getMedicineName());
                     EmedicineDosage.add(model.getMedicineDosage());
                     EmedicineTime.add(model.getMedicineTime());
@@ -179,6 +186,7 @@ public class RemainderFragment extends Fragment {
         if (cursor.moveToFirst()) {
             do {
                 MedicineModel mn=new MedicineModel();
+                mn.setId(cursor.getInt(cursor.getColumnIndex(MedicineModel.COLUMN_ID)));
                 mn.setMedicineName(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_NAME)));
                 mn.setMedicineDosage(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_DOSAGE)));
                // mn.setMedicineType(cursor.getString(cursor.getColumnIndex(MedicineModel.COLUMN_TYPE)));
@@ -194,18 +202,18 @@ public class RemainderFragment extends Fragment {
     private void initRecyclerView() {
 
         RecyclerView recyclerView = v.findViewById(R.id.recycle_view);
-        RecycleAdapter adapter = new RecycleAdapter(getContext(),MimageId,MmedicineName,MmedicineDosage,MmedicineType,MmedicineTime);
+        RecycleAdapter adapter = new RecycleAdapter(getContext(),MId,MimageId,MmedicineName,MmedicineDosage,MmedicineType,MmedicineTime);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
         RecyclerView recyclerView1 = v.findViewById(R.id.recycle_view2);
-        RecycleAdapter adapter1 = new RecycleAdapter(getContext(),AimageId,AmedicineName,AmedicineDosage,AmedicineType,AmedicineTime);
+        RecycleAdapter adapter1 = new RecycleAdapter(getContext(),AId,AimageId,AmedicineName,AmedicineDosage,AmedicineType,AmedicineTime);
         recyclerView1.setAdapter(adapter1);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
 
         RecyclerView recyclerView3 = v.findViewById(R.id.recycle_view3);
-        RecycleAdapter adapter3 = new RecycleAdapter(getContext(),EimageId,EmedicineName,EmedicineDosage,EmedicineType,EmedicineTime);
+        RecycleAdapter adapter3 = new RecycleAdapter(getContext(),EId,EimageId,EmedicineName,EmedicineDosage,EmedicineType,EmedicineTime);
         recyclerView3.setAdapter(adapter3);
         recyclerView3.setLayoutManager(new LinearLayoutManager(getContext()));
     }

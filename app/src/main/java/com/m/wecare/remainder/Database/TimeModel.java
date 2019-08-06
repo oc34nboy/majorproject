@@ -19,7 +19,7 @@ public class TimeModel {
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_MEDICINE_ID+ " int,"
                     + COLUMN_TIME+" VARCHAR(100),"
-                    + "FOREIGN KEY ("+COLUMN_MEDICINE_ID +") REFERENCES "+MedicineModel.TABLE_NAME+"("+MedicineModel.COLUMN_ID+")"
+                    + "FOREIGN KEY ("+COLUMN_MEDICINE_ID +") REFERENCES "+MedicineModel.TABLE_NAME+"("+MedicineModel.COLUMN_ID+") ON DELETE CASCADE "
                     + ")";
 
 

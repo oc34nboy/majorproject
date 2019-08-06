@@ -21,7 +21,7 @@ import static android.content.ContentValues.TAG;
 
 public class    RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
 
-
+    private ArrayList<Integer> Id=new ArrayList<>();
     private ArrayList<Integer> imageId=new ArrayList<>();
     private ArrayList<String> medicineName=new ArrayList<>();
     private ArrayList<String> medicineDosage=new ArrayList<>();
@@ -29,7 +29,8 @@ public class    RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewH
     private ArrayList<String> medicineTime=new ArrayList<>();
     private Context context;
 
-    public RecycleAdapter(Context context,ArrayList<Integer> imageId, ArrayList<String> medicineName, ArrayList<String> medicineDosage, ArrayList<String> medicineType, ArrayList<String> medicineTime) {
+    public RecycleAdapter(Context context,ArrayList<Integer> Id,ArrayList<Integer> imageId, ArrayList<String> medicineName, ArrayList<String> medicineDosage, ArrayList<String> medicineType, ArrayList<String> medicineTime) {
+        this.Id=Id;
         this.imageId = imageId;
         this.medicineName = medicineName;
         this.medicineDosage = medicineDosage;
@@ -63,6 +64,7 @@ public class    RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewH
 
                 //opening activity showing medicine details
                 Intent intent=new Intent(context,MedicineDetail.class);
+                intent.putExtra("id",Id.get(position)+"");
                 intent.putExtra("name",medicineName.get(position));
                 intent.putExtra("dosage",medicineDosage.get(position));
                 intent.putExtra("type",medicineType.get(position));
